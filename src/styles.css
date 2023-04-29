@@ -1,0 +1,383 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    background: url(../imgs/fondo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: sans-serif;
+    width: 100%;
+}
+/* EMPIEZA CSS DEL NAV */
+
+nav{
+    position:fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: rgba(25, 25, 25, .5);
+    height: 80px;
+    width: 100%;
+}
+
+.enlace-logo{
+    position: absolute;
+    padding: 20px 50px;
+    display: flex;
+}
+h1{
+    color: #fff;
+    font-size: 30px;
+    margin: 5px 0 0 25px;
+}
+
+.logo{
+    height: 45px;
+}
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 85px;
+    margin: 0 5px;
+}
+
+nav ul li a{
+    color: #fff;
+    font-size: 18px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    
+}
+
+li a:hover{
+    background-color: rgb(78, 82, 82);
+    transition: .9s;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 85px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+/* AQUI TERMINA CSS DEL NAV */
+
+/* AQUI EMPIEZA EL HEADER */
+header{
+    margin: 90px 100px 50px 100px;
+    height: 500px;
+    border-radius: 2rem;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    /*fondo*/
+    background: url(../imgs/banner1.jpg) no-repeat center center/cover;
+    background-size: cover;
+    background-position: top ;
+}
+
+.banner-info{
+    background-color: rgba(25, 25, 25, .5);
+    border-radius: 1rem;
+    margin: 0 70px;
+    padding: 10px;
+    text-align: center;
+    color: #bcbcc2;
+}
+
+.banner-info h2{
+    font-size: 30px;
+}
+.banner-info p{
+    font-size: 20px;
+}
+
+/* AQUI TERMINA EL HEADER */
+
+/*EMPIEZA CONTAINER*/
+
+
+.section1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.section1 .sub-title{
+    background-color: rgba(25, 25, 25, .5);
+    margin: 50px;
+    padding: 20px;
+    border-radius: 1rem;
+    color: #f3f3f3;
+    text-align: center;
+}
+
+
+/*CSS DE CARTAS*/
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    flex-wrap: wrap;
+}
+
+.card{
+    position: relative;
+    width: 300px;
+    height: 350px;
+    margin: 20px;
+}
+
+.card .face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: .7s;
+}
+
+.card .front{
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px #000;
+    background: rgba(25, 25, 25, .5);
+}
+
+.card .front img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /*Para que se muestr la imagen completa*/
+}
+
+.card .front h3{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.4); 
+    text-align: center;
+}
+
+.card .back{
+    transform: perspective(600px) rotateY(180deg);
+    background: rgb(3, 35, 54);
+    padding: 15px;
+    color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px #000;
+}
+
+.card .back .link{
+    border-top: 1px solid #f3f3f3;
+    height: 50px;
+    line-height: 50px;
+}
+
+.card .back .link a{
+    color: #f3f3f3;
+}
+
+.card .back h3{
+    font-size: 30px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+
+.card .back p{
+    letter-spacing: 1px;
+}
+
+.card:hover .front{
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.card:hover .back{
+    transform: perspective(600px) rotateY(360deg);
+}
+/*TERMINA CSS CARDS*/
+/*CSS FOOTER*/
+footer{
+    background-color: #1e1d1f;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%237b7881' fill-opacity='0.18' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");    background-attachment: fixed;
+    min-height: 200px;
+    width: 100%;
+    clip-path: polygon(0 28px,30% 28px,calc(30% + 56px) 0,calc(70% - 56px) 0,70% 28px,100% 28px,100% 100%,0 100%); 
+
+    color: #bcbcc2
+    
+}
+.footer-div-up{        
+    padding-top: 15px;
+    background-color: rgba(0, 0, 0, 0.4); /*QUITAR AL FINALIZAR*/
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 15px;    
+    
+}
+
+.fa-angles-up{
+    font-size: 20px;
+    text-align: center;
+}
+
+.footer-div-up p{
+    color: #bcbcc2; 
+    padding: 20px 20px 15px 20px;
+    font-weight: bold;
+}
+
+.footer-div-up:hover p{
+    color: #fff;
+}
+/*
+.linea {
+    border-top: 2px dashed rgb(92, 88, 88);
+    height: 2px;
+    width: 70%;
+    padding: 0;
+    margin: 0 auto 0 auto;
+}*/
+
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0 10px 0;
+    
+}
+
+
+
+.footer-container .footer-logo img{
+    height: 90px;
+    padding: 10px;
+    background: #bcbcc2;
+    margin-left: 20PX;
+    border-radius: 1rem;
+}
+
+.footer-container .footer-social{
+    padding: 15px;
+    text-align: center;
+}
+
+.social-icons{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.social-icons a{
+    margin-top: 10px;
+    padding: 10px ;
+    font-size: 35px;
+}
+
+
+/*EMPIEZA CSS RESPONSIVE*/
+
+@media (max-width: 952px){
+    /* CSS NAV*/
+    .enlace-logo{
+        padding-left: 20px;
+    }
+
+    nav ul li a{
+        font-size: 16px;
+    }
+
+    /*CSS HEADER*/
+
+
+}
+
+@media (max-width: 850px){
+    /* CSS DE NAV*/
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: rgba(25, 25, 25, .5);
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    
+
+
+    /* TERMINA CSS DE NAV*/
+    /* EMPIEZA CSS DE HEADER*/
+
+    header{
+        margin: 80px 0 0 0;
+        padding: 0;
+       
+    }
+
+    .banner-info h2{
+        font-size: 20px;
+    }
+    .banner-info p{
+        font-size: 15px;
+    }
+
+    /*TERMINA CSS DE HEADER*/
+
+   /* CSS FOOTER */
+   .social-icons a{
+    font-size: 25px;
+}
+
+}
+@media (max-width: 360px){
+    /* CSS DE NAV*/
+    h1{
+        font-size: 25px;
+    }
+    /* TERMINA CSS DE NAV*/
+
+    /* EMPIEZA CSS DE HEADER*/
+
+
+
+    /* TERMINA CSS DE HEADER*/
+}
