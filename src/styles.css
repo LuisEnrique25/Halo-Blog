@@ -6,10 +6,10 @@
     box-sizing: border-box;
 }
 body{
-    background: url(../imgs/fondo.jpg);
+    background: url(../imgs/fondo.webp);
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: fixed; 
     font-family: sans-serif;
     width: 100%;
 }
@@ -56,10 +56,9 @@ nav ul li a{
     font-size: 18px;
     padding: 7px 13px;
     border-radius: 3px;
-    
 }
 
-li a:hover{
+    li a:hover{
     background-color: rgb(78, 82, 82);
     transition: .9s;
 }
@@ -91,7 +90,7 @@ header{
     align-items: center;
     justify-content: flex-end;
     /*fondo*/
-    background: url(../imgs/banner1.jpg) no-repeat center center/cover;
+    background: url(../imgs/banner1.webp) no-repeat center center/cover;
     background-size: cover;
     background-position: top ;
 }
@@ -117,14 +116,14 @@ header{
 /*EMPIEZA CONTAINER*/
 
 
-.section1{
+section{
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 50px;
 }
 
-.section1 .sub-title{
+.sub-title{
     background-color: rgba(25, 25, 25, .5);
     margin: 50px;
     padding: 20px;
@@ -223,6 +222,83 @@ header{
     transform: perspective(600px) rotateY(360deg);
 }
 /*TERMINA CSS CARDS*/
+
+.linea {
+    border-top: 10px double rgb(92, 88, 88);
+    height: 10px;
+    width: 70%;
+    padding: 0;
+    margin: 55px auto 0 auto;
+}
+
+/*SECTION HISTORIA*/
+.hist-card{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.txt-cont{
+    background: rgba(25, 25, 25, .5);
+    color: #bcbcc2;
+    border-radius: 1rem;
+    padding: 10px;
+    margin: 10px 20px 10px 10px;
+}
+
+.img-cont{
+    padding: 20px;
+}
+
+.reverse{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.txt-cont p, .txt-cont h3{
+    padding: 15px 0 15px 0;
+}
+.txt-cont h3{
+    font-size: 25px;
+}
+.txt-cont p{
+    font-size: 18px;
+    text-align: justify;
+    padding: 10px;
+}
+
+.reach-link{
+    display: flex;
+    margin: 10px;
+    justify-content: center;
+}
+
+.reach-link a{
+    border-radius: 1rem;
+    background-color: rgba(15, 3, 36, 0.6);
+    color: #bcbcc2;
+    padding: 10px;
+}
+
+.reach-link a:hover{
+    background-color: rgba(35, 5, 90, 0.6);
+    font-weight: bold;
+}
+
+.hist-card .img-cont{
+    display: flex;
+    justify-content: center;
+}
+
+.img-history{
+    height: 350px;
+    border-radius: 10px 100px / 100px;
+}
+
+
+/*TERMINA SECTION HISTORIA*/
+
+
 /*CSS FOOTER*/
 footer{
     background-color: #1e1d1f;
@@ -258,14 +334,7 @@ footer{
 .footer-div-up:hover p{
     color: #fff;
 }
-/*
-.linea {
-    border-top: 2px dashed rgb(92, 88, 88);
-    height: 2px;
-    width: 70%;
-    padding: 0;
-    margin: 0 auto 0 auto;
-}*/
+
 
 .footer-container{
     display: flex;
@@ -303,6 +372,12 @@ footer{
 
 /*EMPIEZA CSS RESPONSIVE*/
 
+@media (max-width: 1040px) {
+    .hist-card{
+        flex-direction: column;
+    }
+}
+
 @media (max-width: 952px){
     /* CSS NAV*/
     .enlace-logo{
@@ -315,6 +390,7 @@ footer{
 
     /*CSS HEADER*/
 
+    
 
 }
 
@@ -342,6 +418,9 @@ footer{
         font-size: 20px;
     }
     
+    #check:checked ~ ul{
+        left: 0;
+    }
 
 
     /* TERMINA CSS DE NAV*/
@@ -350,6 +429,7 @@ footer{
     header{
         margin: 80px 0 0 0;
         padding: 0;
+        width: 100%;
        
     }
 
@@ -362,16 +442,25 @@ footer{
 
     /*TERMINA CSS DE HEADER*/
 
+    /*Historia*/
+    .img-history{
+        height: 200px;
+    }
+    /*Historia*/
+
    /* CSS FOOTER */
    .social-icons a{
     font-size: 25px;
 }
 
 }
-@media (max-width: 360px){
+@media (max-width: 395px){
     /* CSS DE NAV*/
     h1{
-        font-size: 25px;
+        display: none;
+    }
+    body{
+        width: min-content; /*PARA QUE NO SE AMONTONE EN PANTALLAS CHICAS*/
     }
     /* TERMINA CSS DE NAV*/
 
